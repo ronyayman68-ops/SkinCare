@@ -6,19 +6,20 @@ export default function Shop() {
       name: "Rose Elixir",
       category: "Hydrating Serum",
       price: "$48",
-      emoji: "🧴",
+      // 1. Replace emoji strings with image paths
+      image: "rose-elixir.png", 
     },
     {
       name: "Velvet Cream",
       category: "Night Repair",
       price: "$62",
-      emoji: "🫧",
+      image: "velvet-cream.png",
     },
     {
       name: "Golden Essence",
       category: "Vitamin C Oil",
       price: "$54",
-      emoji: "✨",
+      image: "golden-essence.png",
     },
   ];
 
@@ -26,7 +27,6 @@ export default function Shop() {
     <section id="shop" className="py-32 px-6 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-pink-100/40 rounded-full blur-[120px]"></div>
-
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-100/40 rounded-full blur-[120px]"></div>
 
       {/* Container */}
@@ -42,7 +42,6 @@ export default function Shop() {
           <p className="uppercase tracking-[0.3em] text-sm text-[#9F7F7F] mb-4">
             Our Collection
           </p>
-
           <h2 className="text-5xl md:text-6xl font-playfair text-[#3B2F2F]">
             Best Sellers
           </h2>
@@ -57,9 +56,7 @@ export default function Shop() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{
-                y: -12,
-              }}
+              whileHover={{ y: -12 }}
               className="group relative backdrop-blur-xl bg-white/30 border border-white/40 rounded-[40px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] overflow-hidden"
             >
               {/* Card Glow */}
@@ -68,16 +65,20 @@ export default function Shop() {
               {/* Product Visual */}
               <div className="relative flex justify-center items-center h-[260px]">
                 <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                  }}
+                  animate={{ y: [0, -10, 0] }}
                   transition={{
                     duration: 4,
                     repeat: Infinity,
+                    ease: "easeInOut", // Smoother floating transition
                   }}
-                  className="text-8xl"
+                  className="w-full h-full flex justify-center items-center"
                 >
-                  {product.emoji}
+                  {/* 2. Swapped text-8xl emoji div for an img tag */}
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="max-h-[200px] w-auto object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.03)]" 
+                  />
                 </motion.div>
               </div>
 
@@ -86,11 +87,9 @@ export default function Shop() {
                 <p className="uppercase tracking-[0.25em] text-[11px] text-[#9F7F7F] mb-3">
                   {product.category}
                 </p>
-
                 <h3 className="text-3xl font-playfair text-[#3B2F2F]">
                   {product.name}
                 </h3>
-
                 <p className="mt-4 text-[#6B5B5B]">{product.price}</p>
 
                 {/* Button */}

@@ -91,8 +91,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE */}
-        <div className="flex justify-center">
+        {/* RIGHT SIDE - Product Circle */}
+        <div className="flex justify-center relative">
           <motion.div
             animate={{
               y: [0, -20, 0],
@@ -105,35 +105,46 @@ export default function Hero() {
             whileHover={{
               scale: 1.03,
             }}
-            className="relative cursor-pointer"
+            className="relative cursor-pointer flex flex-col items-center"
           >
-            {/* Glow */}
+            {/* Glow halo */}
             <div className="absolute inset-0 bg-gradient-to-r from-pink-200 to-yellow-100 rounded-full blur-[80px] opacity-70"></div>
 
-            {/* Product Circle */}
-            <div className="relative w-[340px] h-[340px] rounded-full bg-gradient-to-br from-pink-100 via-rose-100 to-yellow-50 p-1 shadow-2xl shadow-pink-100">
-              <div className="w-full h-full rounded-full backdrop-blur-xl bg-white/40 border border-white/50 flex items-center justify-center">
-                <div className="text-center">
-                  <motion.p
-                    animate={{
-                      y: [0, -8, 0],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                    }}
-                    className="text-5xl mb-4"
-                  >
-                    🧴
-                  </motion.p>
+            {/* Main Outer Container */}
+            <div className="relative w-[340px] h-[340px] rounded-full bg-gradient-to-br from-pink-100 via-rose-100 to-yellow-50 p-1 shadow-2xl shadow-pink-100 mb-6">
+              {/* Internal frosted glass container */}
+              <div className="w-full h-full rounded-full backdrop-blur-xl bg-white/40 border border-white/50 flex items-center justify-center overflow-hidden">
+                
+                {/* Perfect Circular Product Image */}
+                <motion.div
+                  className="w-[240px] h-[240px] rounded-full overflow-hidden border border-white/60 shadow-lg"
+                  animate={{
+                    y: [0, -6, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <img
+                    src="/final.png" 
+                    alt="Rose Elixir Product"
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
 
-                  <h2 className="text-2xl text-[#3B2F2F] font-['Playfair_Display']">
-                    Rose Elixir
-                  </h2>
-
-                  <p className="text-[#7A6666] mt-2">Hydrating Glow Serum</p>
-                </div>
               </div>
+            </div>
+
+            {/* Text Labels moved directly underneath the glass circle */}
+            <div className="text-center z-10">
+              <h2 className="text-3xl text-[#3B2F2F] font-['Playfair_Display']">
+                PRODUCTS
+              </h2>
+              <p className="text-[#7A6666] mt-2 text-sm uppercase tracking-wider">
+                Hydrating serums
+              </p>
             </div>
           </motion.div>
         </div>

@@ -8,7 +8,6 @@ export default function About() {
     >
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-pink-100/40 rounded-full blur-[120px]"></div>
-
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-100/40 rounded-full blur-[120px]"></div>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center relative z-10">
@@ -31,15 +30,24 @@ export default function About() {
             transition={{
               duration: 6,
               repeat: Infinity,
+              ease: "easeInOut",
             }}
             className="relative w-full max-w-[420px] h-[520px] rounded-[50px] backdrop-blur-xl bg-white/30 border border-white/40 shadow-[0_10px_50px_rgba(0,0,0,0.06)] overflow-hidden"
           >
             {/* Decorative Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-pink-100/20 to-yellow-100/20"></div>
 
-            {/* Placeholder Content */}
+            {/* Content Container */}
             <div className="w-full h-full flex flex-col items-center justify-center text-center p-10">
-              <div className="text-8xl mb-8">🌸</div>
+              
+              {/* Swapped emoji out for your add.png image */}
+              <div className="w-32 h-32 flex items-center justify-center mb-8">
+                <img 
+                  src="/add.png" 
+                  alt="Lunelle Pure Beauty Concept" 
+                  className="max-w-full max-h-full object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.04)]"
+                />
+              </div>
 
               <h3 className="text-4xl font-playfair text-[#3B2F2F]">
                 Pure Beauty
@@ -89,7 +97,6 @@ export default function About() {
               className="backdrop-blur-xl bg-white/30 border border-white/40 rounded-[30px] p-6 text-center"
             >
               <h3 className="text-3xl font-playfair text-[#3B2F2F]">98%</h3>
-
               <p className="mt-2 text-sm text-[#6B5B5B]">Organic</p>
             </motion.div>
 
@@ -98,7 +105,6 @@ export default function About() {
               className="backdrop-blur-xl bg-white/30 border border-white/40 rounded-[30px] p-6 text-center"
             >
               <h3 className="text-3xl font-playfair text-[#3B2F2F]">50K+</h3>
-
               <p className="mt-2 text-sm text-[#6B5B5B]">Customers</p>
             </motion.div>
 
@@ -107,7 +113,6 @@ export default function About() {
               className="backdrop-blur-xl bg-white/30 border border-white/40 rounded-[30px] p-6 text-center"
             >
               <h3 className="text-3xl font-playfair text-[#3B2F2F]">12</h3>
-
               <p className="mt-2 text-sm text-[#6B5B5B]">Awards</p>
             </motion.div>
           </div>
