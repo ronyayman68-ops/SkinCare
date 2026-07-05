@@ -104,7 +104,7 @@ export default function About() {
               whileHover={{ y: -6 }}
               className="backdrop-blur-xl bg-white/30 border border-white/40 rounded-[30px] p-6 text-center"
             >
-              <h3 className="text-3xl font-playfair text-[#3B2F2F]">50K+</h3>
+              <h3 className="text-3xl font-playfair text-[#3B2F2F]">50M+</h3>
               <p className="mt-2 text-sm text-[#6B5B5B]">Customers</p>
             </motion.div>
 
@@ -112,7 +112,7 @@ export default function About() {
               whileHover={{ y: -6 }}
               className="backdrop-blur-xl bg-white/30 border border-white/40 rounded-[30px] p-6 text-center"
             >
-              <h3 className="text-3xl font-playfair text-[#3B2F2F]">12</h3>
+              <h3 className="text-3xl font-playfair text-[#3B2F2F]">50</h3>
               <p className="mt-2 text-sm text-[#6B5B5B]">Awards</p>
             </motion.div>
           </div>
