@@ -43,4 +43,4 @@ Ensure you have a modern web browser installed. If utilizing a local development
 ### Local Setup
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/ronyayman68-ops/SkinCare.git](https://github.com/ronyayman68-ops/SkinCare.git)
+   git clone [https://github.com/ronyayman68-ops/SkinCare.git]
